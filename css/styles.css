@@ -1,202 +1,252 @@
 /*
-Theme Name: ME – Resume and Personal Portfolio Responsive Template
-Updated: Vertical Portfolio Layout Version
+Theme Name: ME – Resume and Personal Portfolio
+Version: Clean Vertical Portfolio Edition
+Author: Updated Layout
 */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 * {
-	margin: 0;
-	padding: 0;
-	font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-size: 14px;
-	-webkit-font-smoothing: antialiased;
-	background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #555;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-	color: #fff;
-	background: #FF7A00;
+    background: #FF7A00;
+    color: #fff;
 }
 
-p {
-	color: #858585;
-	line-height: 22px;
-	font-size: 15px;
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #222;
 }
 
 h2 {
-	font-size: 40px;
-	padding-bottom: 16px;
-	font-variant: small-caps;
-	color: #FF7A00;
+    font-size: 38px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Buttons */
-
-.btn-primary {
-	background: #FF7A00;
-	border: 0;
-	border-radius: 0;
+p {
+    line-height: 1.8;
+    margin-bottom: 15px;
 }
 
-.btn-primary:hover {
-	background: #DF6B00;
+section {
+    padding: 90px 0;
 }
 
-/* Header */
+/* ======================================
+   NAVBAR
+====================================== */
 
 .header {
-	position: fixed;
-	width: 100%;
-	background: #000;
-	z-index: 1000;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: #000;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-inverse {
+    background: #000;
+    border: none;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 14px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 25px 15px;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-	color: #FF7A00;
+    color: #FF7A00;
 }
 
-/* Sections */
+/* ======================================
+   HERO
+====================================== */
 
-section {
-	padding: 80px 0;
+#home {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0 120px 0;
 }
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* ======================================
+   SKILLS
+====================================== */
 
 #skills {
-	background: #f8f8f8;
+    background: #f8f8f8;
 }
+
+/* ======================================
+   PORTFOLIO (VERTICAL LAYOUT)
+====================================== */
 
 #portfolio {
-	background: #f4f4f4;
+    background: #f4f4f4;
 }
-
-#experience {
-	background: #ffffff;
-}
-
-/* ===============================
-   NEW VERTICAL PORTFOLIO STYLES
-================================ */
 
 .portfolio-items {
-	margin-top: 60px;
+    margin-top: 60px;
 }
 
 .portfolio-row {
-	display: flex;
-	align-items: center;
-	margin-bottom: 80px;
-	border-bottom: 1px solid #e5e5e5;
-	padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .portfolio-row:last-child {
-	border-bottom: none;
+    border-bottom: none;
 }
 
-.portfolio-row img {
-	width: 100%;
-	border-radius: 6px;
-	box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-	transition: transform 0.3s ease;
+.portfolio-image {
+    flex: 1;
 }
 
-.portfolio-row img:hover {
-	transform: scale(1.02);
+.portfolio-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-image img:hover {
+    transform: scale(1.03);
 }
 
 .portfolio-content {
-	padding: 30px 40px;
+    flex: 1;
+    padding-left: 60px;
 }
 
 .portfolio-content h3 {
-	font-size: 26px;
-	font-weight: 700;
-	margin-bottom: 20px;
-	color: #222;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .portfolio-content p {
-	font-size: 16px;
-	line-height: 1.8;
-	color: #666;
+    font-size: 16px;
+    color: #666;
 }
 
-/* Remove old isotope / grid behavior */
+/* ======================================
+   EXPERIENCE
+====================================== */
 
-.isotopeWrapper,
-.portfolio-item,
-.portfolio-desc,
-.folio-info,
-nav#filter {
-	display: none !important;
+#experience {
+    background: #ffffff;
 }
 
-/* Contact */
+/* ======================================
+   CONTACT
+====================================== */
 
 #contactUs {
-	background: #f8f8f8;
+    background: #f8f8f8;
 }
+
+.btn-primary {
+    background: #FF7A00;
+    border: none;
+    border-radius: 0;
+    padding: 10px 25px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #e56f00;
+}
+
+/* ======================================
+   FOOTER
+====================================== */
 
 footer {
-	background: #000;
-	color: #aaa;
-	padding: 30px 0;
-	text-align: center;
+    background: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 40px 0;
 }
 
-/* ===============================
-   Responsive
-================================ */
+/* ======================================
+   RESPONSIVE
+====================================== */
 
 @media (max-width: 992px) {
 
-.portfolio-row {
-	flex-direction: column;
-	text-align: center;
-}
+    .portfolio-row {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.portfolio-content {
-	padding: 30px 0 0 0;
-}
+    .portfolio-content {
+        padding-left: 0;
+        padding-top: 30px;
+    }
 
+    #home h1 {
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 768px) {
 
-h2 {
-	font-size: 30px;
-}
+    h2 {
+        font-size: 30px;
+    }
 
-.portfolio-content h3 {
-	font-size: 22px;
-}
+    .portfolio-content h3 {
+        font-size: 22px;
+    }
 
-.portfolio-content p {
-	font-size: 15px;
-}
-
+    section {
+        padding: 70px 0;
+    }
 }
 
 @media (max-width: 480px) {
 
-section {
-	padding: 60px 0;
-}
+    #home {
+        padding: 120px 0 100px 0;
+    }
 
-.portfolio-row {
-	margin-bottom: 60px;
-	padding-bottom: 40px;
-}
+    #home h1 {
+        font-size: 28px;
+    }
 
+    .portfolio-row {
+        margin-bottom: 60px;
+        padding-bottom: 40px;
+    }
 }
